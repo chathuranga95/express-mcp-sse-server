@@ -27,8 +27,8 @@ ENV NODE_ENV=production
 ENV PORT=3001
 
 # Create a non-root user for security
-RUN addgroup -g 1001 -S nodejs
-RUN adduser -S nodeuser -u 1001
+RUN addgroup -g 10001 -S nodejs
+RUN adduser -S nodeuser -u 10001
 
 # Change ownership of the app directory to the nodejs user
 RUN chown -R nodeuser:nodejs /app
