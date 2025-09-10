@@ -28,7 +28,7 @@ ENV PORT=3001
 
 # Create a non-root user for security
 RUN addgroup -g 10001 -S nodejs
-RUN adduser -S nodeuser -u 10001
+RUN adduser -S nodeuser -u 10001 -G nodejs
 
 # Change ownership of the app directory to the nodejs user
 RUN chown -R nodeuser:nodejs /app
